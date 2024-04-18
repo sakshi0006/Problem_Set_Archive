@@ -1,4 +1,3 @@
-
 /* Q1: Histogram of Tweets [Twitter SQL Interview Question]
 
 Assume you're given a table Twitter tweet data, write a query to obtain a histogram of tweets posted per user in 2022. Output the tweet count per user as the bucket and the number of Twitter users who fall into that bucket.
@@ -28,8 +27,6 @@ FROM tweets
 WHERE EXTRACT(Year from tweet_date) = 2022
 GROUP BY user_id) as x
 GROUP BY x.tweet_bucket;
-
-
 
 
 /* Q2: Data Science Skills [LinkedIn SQL Interview Question]
@@ -68,3 +65,4 @@ FROM candidates
 where skill = 'Python' OR skill = 'Tableau' OR skill = 'PostgreSQL') as filtered_table
 GROUP BY candidate_id
 HAVING count(candidate_id) = 3;
+
